@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0a0e1a;
+  color: #ffffff;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Neon text effects */
+.neon-text-lime {
+  color: #ccff00;
+  text-shadow: 
+    0 0 10px #ccff00,
+    0 0 20px #ccff00,
+    0 0 40px #ccff00,
+    0 0 80px #ccff00;
+}
+
+.neon-text-green {
+  color: #00ff88;
+  text-shadow: 
+    0 0 10px #00ff88,
+    0 0 20px #00ff88,
+    0 0 40px #00ff88;
+}
+
+.neon-text-yellow {
+  color: #ffeb3b;
+  text-shadow: 
+    0 0 10px #ffeb3b,
+    0 0 20px #ffeb3b,
+    0 0 40px #ffeb3b;
+}
+
+/* Neon card */
+.neon-card {
+  background: linear-gradient(135deg, rgba(12, 25, 40, 0.9), rgba(5, 10, 20, 0.95));
+  border: 2px solid rgba(204, 255, 0, 0.3);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 20px rgba(204, 255, 0, 0.1),
+    inset 0 0 20px rgba(204, 255, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.neon-card:hover {
+  border-color: rgba(204, 255, 0, 0.6);
+  box-shadow: 
+    0 0 40px rgba(204, 255, 0, 0.3),
+    inset 0 0 30px rgba(204, 255, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.neon-card-glow {
+  background: radial-gradient(circle at center, rgba(204, 255, 0, 0.1), rgba(0, 0, 0, 0.8));
+  border: 3px solid #ccff00;
+  box-shadow: 
+    0 0 40px rgba(204, 255, 0, 0.4),
+    0 0 80px rgba(204, 255, 0, 0.2),
+    inset 0 0 40px rgba(204, 255, 0, 0.1);
+}
+
+/* Neon buttons */
+.neon-button {
+  background: linear-gradient(135deg, #ccff00, #00ff88);
+  color: #0a0e1a;
+  font-weight: 900;
+  border: none;
+  box-shadow: 
+    0 0 20px rgba(204, 255, 0, 0.6),
+    0 0 40px rgba(204, 255, 0, 0.3);
+}
+
+.neon-button:hover {
+  box-shadow: 
+    0 0 40px rgba(204, 255, 0, 0.8),
+    0 0 80px rgba(204, 255, 0, 0.4);
+}
+
+.neon-button-large {
+  background: linear-gradient(135deg, #ccff00, #00ff88);
+  color: #0a0e1a;
+  padding: 1.5rem 3.5rem;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: none;
+  box-shadow: 
+    0 0 30px rgba(204, 255, 0, 0.7),
+    0 0 60px rgba(204, 255, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.neon-button-large:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 50px rgba(204, 255, 0, 0.9),
+    0 0 100px rgba(204, 255, 0, 0.5);
+}
+
+/* Neon tags */
+.neon-tag {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(204, 255, 0, 0.1);
+  border: 2px solid #ccff00;
+  border-radius: 50px;
+  color: #ccff00;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.neon-tag:hover {
+  background: rgba(204, 255, 0, 0.2);
+  box-shadow: 0 0 40px rgba(204, 255, 0, 0.5);
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(204, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* Pulse animation */
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Spin slow */
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ccff00, #00ff88);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccff00;
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.8);
+}
+
+::selection {
+  background-color: #ccff00;
+  color: #0a0e1a;
+}
